@@ -19,7 +19,7 @@ const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 // =======================================================
 // 简化版：仅替换模型名和密钥，保持 OpenRouter 格式
 async function callOpenRouter(messages: any[], apiKey: string): Promise<{ type: 'image' | 'text'; content: string }> {
-    const baseUrl = "http://localhost:8000/api/plugin/update-token";
+    const baseUrl = "http://localhost:8000";
     const openrouterPayload = {
         model: "google/gemini-3-flash", // 换成 Gemini 模型名
         messages
